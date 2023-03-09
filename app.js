@@ -3,8 +3,8 @@
  * It also demonstrates how you would process and send messages.
  */
 
-
-const TOKEN = process.env.TELEGRAM_TOKEN || 'YOUR_TELEGRAM_BOT_TOKEN';
+require('dotenv').config();
+const TOKEN = process.env.TELEGRAM_TOKEN ;
 const TelegramBot = require('node-telegram-bot-api');
 const request = require('request');
 const options = {
