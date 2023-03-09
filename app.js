@@ -21,6 +21,10 @@ bot.onText(/\/photo/, function onPhotoText(msg) {
     caption: "I'm a bot!"
   });
 });
+bot.onText(/hi/, function onHiText(msg) {
+  // From file path
+  bot.sendMessage(msg.chat.id, "Hello, I'm a bot!");
+});
 
 
 // Matches /audio
