@@ -21,9 +21,9 @@ bot.onText(/\/photo/, function onPhotoText(msg) {
     caption: "I'm a bot!"
   });
 });
-bot.onText(/hi/, function onHiText(msg) {
+bot.onText(new RegExp('hello'), function onHiText(msg) {
   // From file path
-  bot.sendMessage(msg.chat.id, "Hello, I'm a bot!");
+  bot.sendMessage(msg.chat.id, "Why did you call me?");
 });
 
 
@@ -91,6 +91,5 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
   if (action === 'edit') {
     text = 'Edited Text';
   }
-
   bot.editMessageText(text, opts);
 });
